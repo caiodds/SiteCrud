@@ -33,6 +33,7 @@ if ((isset($_POST["acao"]))) {
     <title>Cadastro</title>
 </head>
 <body>
+    
     <form method="POST">
     <h1 class="bem">Seja bem vindo </h1><br>
     <p class="nome"> <i class="fa-solid fa-user"></i>Digite seu nome</p></i> 
@@ -43,6 +44,7 @@ if ((isset($_POST["acao"]))) {
     <button name="acao" type="submit" class="btn btn-primary">Cadastrar <i class="fa-solid fa-right-to-bracket"></i> </button>
     <p>Bem vindo ao servidor <a class="entrar" href="samp://">Clique aqui para copiar o ip</a></p>
 </form>
+
     <script>
 
     </script>

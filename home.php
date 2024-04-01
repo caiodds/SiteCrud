@@ -20,20 +20,20 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="home.php">inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
+                        <a class="nav-link" href="#">Comprar moedas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
+                        <a class="nav-link" href="#">Vips</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Acessa Perfil
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="perfil.php"><i class="fa-solid fa-user"></i>Administrador</a></li>
+                            <li><a class="dropdown-item" href="?page=perfil"><i class="fa-solid fa-user"></i> Administrador</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -62,6 +62,31 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
+
+    <div class="container">
+    <div class="row">
+        <div class="col mt-5">
+        <?php
+        include("config.php");
+
+        switch (@$_REQUEST["page"]) {
+             case 'inicio':
+            include("home.php");
+            break;
+    
+        case 'listar':
+            include("comprar.php");
+            break;
+        case 'salvar':
+            include('vips.php');
+            break;
+        case 'perfil':
+                include('perfil.php');
+                break;
+        default:
+            print "bem vindo amigo";
+}
+?>
 
 </body>
 

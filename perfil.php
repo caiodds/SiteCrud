@@ -1,29 +1,8 @@
-<script>
-    var senha=prompt("Digite sua senha adm");
-
-    if(senha == 181920){
-        alert("Senhaa correta!");
-    }else{
-        alert(window.location.href='senha incorreta');
-    }
-function myFunction()
-{
-
-var idade=prompt("Digite a senha administrador:");
-
-if (idade == 181920){
-
-}else{
-    alert('acesso negado..');
-    alert(window.location.href='home.php');
-}
-
-}
-</script>
 
 <h1>Listar Usuários</h1>
+<a href="home.php" style="text-decoration: none;">Fechar lista</a>
 <?php
-include("config.php");
+
     $sql = "SELECT * FROM player";
     $res = $con->query($sql);
     $qtd = $res->num_rows;
